@@ -240,7 +240,7 @@ class IconTheme:
 			elif smallest_size_available and size < smallest_size_available:
 				return self.find_icon(icon_name, smallest_size_available, scale, False)
 
-	def find_icon(self, icon_name: str, size: int, scale: Any, prefer_this_theme=True) -> Optional[Icon]:
+	def find_icon(self, icon_name: str, size: int, scale: Any, prefer_this_theme: bool = True) -> Optional[Icon]:
 		"""
 		Searches for the icon with the given name and size.
 
