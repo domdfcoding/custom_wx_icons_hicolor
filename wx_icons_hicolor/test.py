@@ -25,6 +25,7 @@ Functions for testing icon themes.
 
 __all__ = ["test_icon_theme", "test_random_icons"]
 
+# this package
 from wx_icons_hicolor import IconTheme
 
 freedesktop_naming_spec_list = [
