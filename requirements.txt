@@ -1,4 +1,4 @@
-cairosvg>=2.4.2
+cairosvg>=2.5.1
 consolekit>=0.6.0
 domdf-python-tools>=1.7.0
 memoized-property>=1.0.3
