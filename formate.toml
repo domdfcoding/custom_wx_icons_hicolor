@@ -46,5 +46,5 @@ known_third_party = [
     "typing_extensions",
     "wxpython",
 ]
-known_first_party = "wx_icons_hicolor"
+known_first_party = [ "wx_icons_hicolor",]
 line_length = 115
