@@ -27,7 +27,7 @@ Constants for use in wx_icons_hicolor and its derivatives.
 import pathlib
 
 # 3rd party
-import magic  # type: ignore
+import magic
 from domdf_python_tools.compat import importlib_resources
 from typing_extensions import Literal
 

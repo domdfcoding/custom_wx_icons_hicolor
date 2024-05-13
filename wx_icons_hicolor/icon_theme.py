@@ -76,8 +76,8 @@ class IconTheme(Dictable):
 			name: str,
 			comment: str,
 			directories: Sequence[Directory],
-			inherits: Sequence[str] = None,
-			scaled_directories: Sequence[Directory] = None,
+			inherits: Optional[Sequence[str]] = None,
+			scaled_directories: Optional[Sequence[Directory]] = None,
 			hidden: bool = False,
 			example: str = '',
 			):
