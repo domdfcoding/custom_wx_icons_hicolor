@@ -28,7 +28,7 @@ import base64
 import pathlib
 import warnings
 from io import BytesIO
-from typing import Optional
+from typing import Any, Optional
 
 # 3rd party
 import cairosvg  # type: ignore
@@ -112,7 +112,7 @@ class Icon(Dictable):
 			self.min_size = int(size)
 
 	@property
-	def __dict__(self):
+	def __dict__(self):  # noqa: MAN002
 		return dict(
 				name=self.name,
 				path=self.path,
@@ -204,7 +204,7 @@ class Icon(Dictable):
 	def __repr__(self) -> str:
 		return f"Icon({self.name})"
 
-	def __eq__(self, other) -> bool:
+	def __eq__(self, other: Any) -> bool:
 		if isinstance(other, str):
 			return self.name == other
 

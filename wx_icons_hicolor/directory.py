@@ -116,7 +116,7 @@ class Directory(Dictable):
 			self.min_size = size
 
 	@property
-	def __dict__(self):
+	def __dict__(self):  # noqa: MAN002
 		return dict(
 				path=self.path,
 				size=self.size,

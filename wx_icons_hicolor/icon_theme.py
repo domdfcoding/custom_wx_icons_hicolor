@@ -27,7 +27,7 @@ Class to represent an icon theme.
 import configparser
 import copy
 import pathlib
-from typing import Any, List, Optional, Sequence, Type, TypeVar
+from typing import Any, List, Mapping, Optional, Sequence, Type, TypeVar
 
 # 3rd party
 from domdf_python_tools.bases import Dictable
@@ -113,7 +113,7 @@ class IconTheme(Dictable):
 		self.example = example
 
 	@property
-	def __dict__(self):
+	def __dict__(self):  # noqa: MAN002
 		return dict(
 				name=self.name,
 				comment=self.comment,
@@ -124,7 +124,7 @@ class IconTheme(Dictable):
 				example=self.example,
 				)
 
-	def __deepcopy__(self, memodict={}):
+	def __deepcopy__(self, memodict: Mapping = {}) -> "IconTheme":
 		class_dict = self.__dict__
 
 		class_dict["directories"] = [copy.copy(directory) for directory in class_dict["directories"]]
