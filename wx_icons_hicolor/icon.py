@@ -31,8 +31,8 @@ from io import BytesIO
 from typing import Any, Optional
 
 # 3rd party
-import cairosvg  # type: ignore
-import wx  # type: ignore
+import cairosvg  # type: ignore[import-untyped]
+import wx  # type: ignore[import-not-found]
 from domdf_python_tools.bases import Dictable
 from domdf_python_tools.doctools import prettify_docstrings
 from domdf_python_tools.typing import PathLike
@@ -74,10 +74,8 @@ class Icon(Dictable):
 			type: IconTypes = "Threshold",  # noqa: A002  # pylint: disable=redefined-builtin
 			max_size: Optional[int] = None,
 			min_size: Optional[int] = None,
-			theme: str = ''
+			theme: str = '',
 			):
-
-		super().__init__()
 
 		if not isinstance(path, pathlib.Path):
 			path = pathlib.Path(path)
@@ -112,7 +110,7 @@ class Icon(Dictable):
 			self.min_size = int(size)
 
 	@property
-	def __dict__(self):  # noqa: MAN002
+	def __dict__(self):  # type: ignore[override]  # noqa: MAN002
 		return dict(
 				name=self.name,
 				path=self.path,
@@ -145,6 +143,8 @@ class Icon(Dictable):
 		"""
 		Returns the icon as a :class:`~io.BytesIO` object containing PNG image data.
 
+		:param size: Image size.
+
 		:return: :class:`io.BytesIO` object representing the PNG image.
 		"""
 
@@ -166,6 +166,8 @@ class Icon(Dictable):
 	def as_base64_png(self, size: Optional[int] = None) -> str:
 		"""
 		Returns the icon as a base64-encoded object containing PNG image data.
+
+		:param size: Image size.
 
 		:return: Base64-encoded string representing the PNG image.
 		"""

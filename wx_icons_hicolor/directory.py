@@ -32,7 +32,7 @@ from typing import List, Optional, Type, TypeVar
 from domdf_python_tools.bases import Dictable
 from domdf_python_tools.doctools import prettify_docstrings
 from domdf_python_tools.typing import PathLike
-from memoized_property import memoized_property  # type: ignore
+from memoized_property import memoized_property  # type: ignore[import-untyped]
 
 # this package
 from .constants import IconTypes, mime
@@ -82,7 +82,6 @@ class Directory(Dictable):
 			threshold: int = 2,
 			theme: str = '',
 			):
-		super().__init__()
 
 		self.scale: int = int(scale)
 		self.context: str = str(context)
@@ -116,7 +115,7 @@ class Directory(Dictable):
 			self.min_size = size
 
 	@property
-	def __dict__(self):  # noqa: MAN002
+	def __dict__(self):  # type: ignore[override]  # noqa: MAN002
 		return dict(
 				path=self.path,
 				size=self.size,
@@ -149,7 +148,11 @@ class Directory(Dictable):
 			raise TypeError("'config_section' must be a 'configparser.SectionProxy' object")
 
 		path = theme_content_root / config_section.name
-		size = int(config_section.get("Size"))
+
+		size_val = config_section.get("Size")
+		assert size_val is not None
+		size = int(size_val)
+
 		scale = int(config_section.get("Scale", fallback='1'))
 		context = config_section.get("Context", fallback='')
 		type_ = config_section.get("Type", fallback="Threshold")
@@ -175,7 +178,7 @@ class Directory(Dictable):
 				size,
 				scale,
 				context,
-				type_,  # type: ignore
+				type_,  # type: ignore[arg-type]
 				max_size_,
 				min_size_,
 				threshold,

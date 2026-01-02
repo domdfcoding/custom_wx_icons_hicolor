@@ -51,6 +51,8 @@ class IconTheme(Dictable):
 
 	:param name: short name of the icon theme, used in e.g. lists when selecting themes.
 	:param comment: longer string describing the theme
+	:param directories: list of subdirectories for this theme. For every subdirectory there
+		must be a section in the index.theme file describing that directory.
 	:param inherits: The name of the theme that this theme inherits from. If an icon name is not found
 		in the current theme, it is searched for in the inherited theme (and recursively in all the
 		inherited themes).
@@ -58,8 +60,6 @@ class IconTheme(Dictable):
 		If no theme is specified implementations are required to add the "hicolor" theme to the
 		inheritance tree. An implementation may optionally add other default themes in between the last
 		specified theme and the hicolor theme.
-	:param directories: list of subdirectories for this theme. For every subdirectory there
-		must be a section in the index.theme file describing that directory.
 	:param scaled_directories: Additional list of subdirectories for this theme, in addition to the ones
 		in Directories. These directories should only be read by implementations supporting scaled
 		directories and was added to keep compatibility with old implementations that don't support these.
@@ -81,13 +81,12 @@ class IconTheme(Dictable):
 			hidden: bool = False,
 			example: str = '',
 			):
-		super().__init__()
 
 		self.name: str = str(name)
 		self.comment: str = str(comment)
 
 		if not isinstance(directories, list) or not isinstance(directories[0], Directory):
-			print(type(directories, type(directories[0])))  # type: ignore
+			print(type(directories, type(directories[0])))  # type: ignore[call-overload]
 			raise TypeError("'directories' must be a list of Directory objects")
 		self.directories: Sequence[Directory] = sorted(
 				copy.deepcopy(directories),
@@ -113,7 +112,7 @@ class IconTheme(Dictable):
 		self.example = example
 
 	@property
-	def __dict__(self):  # noqa: MAN002
+	def __dict__(self):  # type: ignore[override]  # noqa: MAN002
 		return dict(
 				name=self.name,
 				comment=self.comment,

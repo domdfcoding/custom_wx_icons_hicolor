@@ -33,7 +33,7 @@ Hicolor icon theme for wxPython.
 from typing import Any, Tuple, Union
 
 # 3rd party
-import wx  # type: ignore
+import wx  # type: ignore[import-not-found]
 from domdf_python_tools.doctools import prettify_docstrings
 
 # this package
