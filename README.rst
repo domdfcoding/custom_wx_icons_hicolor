@@ -100,7 +100,7 @@ This package provides a wxPython wxArtProvider class with icons from the Hicolor
 	:alt: Maintenance
 
 .. |pypi-downloads| image:: https://img.shields.io/pypi/dm/wx_icons_hicolor
-	:target: https://pypi.org/project/wx_icons_hicolor/
+	:target: https://pypistats.org/packages/wx_icons_hicolor
 	:alt: PyPI - Downloads
 
 .. end shields
