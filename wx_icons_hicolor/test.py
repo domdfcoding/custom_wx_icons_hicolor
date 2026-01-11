@@ -392,7 +392,7 @@ def test_icon_theme(theme: IconTheme, show_success: bool = True, show_warning: b
 			if icon is None:
 				print(
 						f"{Fore.RED}Failure: '{icon_name}' at size {size} "
-						f"not found in '{theme.name}' Icon Theme or dependencies.{Fore.RESET}"
+						f"not found in '{theme.name}' Icon Theme or dependencies.{Fore.RESET}",
 						)
 				failures += 1
 			else:
@@ -401,14 +401,14 @@ def test_icon_theme(theme: IconTheme, show_success: bool = True, show_warning: b
 						print(
 								f"{Fore.YELLOW}Warning: '{icon_name}' at size {size} "
 								f"not found in '{theme.name}' Icon Theme, "
-								f"but found in dependency '{icon.theme}'.{Fore.RESET}"
+								f"but found in dependency '{icon.theme}'.{Fore.RESET}",
 								)
 					warnings += 1
 				else:
 					if show_success:
 						print(
 								f"{Fore.GREEN}Success: '{icon_name}' at size {size} "
-								f"found in '{theme.name}' Icon Theme.{Fore.RESET}"
+								f"found in '{theme.name}' Icon Theme.{Fore.RESET}",
 								)
 					successes += 1
 
@@ -416,7 +416,7 @@ def test_icon_theme(theme: IconTheme, show_success: bool = True, show_warning: b
 	print(
 			f"{Fore.GREEN}{successes} Successes{Fore.RESET}, "
 			f"{Fore.YELLOW}{warnings} Warnings{Fore.RESET}, "
-			f"{Fore.RED}{failures} Failures{Fore.RESET}."
+			f"{Fore.RED}{failures} Failures{Fore.RESET}.",
 			)
 
 	return dict(
