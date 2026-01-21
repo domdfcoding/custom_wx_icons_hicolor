@@ -65,22 +65,22 @@ wx_icons_hicolor
 		:alt: CodeFactor Grade
 
 	.. |pypi-version| pypi-shield::
-		:project: wx_icons_hicolor
+		:project: wx-icons-hicolor
 		:version:
 		:alt: PyPI - Package Version
 
 	.. |supported-versions| pypi-shield::
-		:project: wx_icons_hicolor
+		:project: wx-icons-hicolor
 		:py-versions:
 		:alt: PyPI - Supported Python Versions
 
 	.. |supported-implementations| pypi-shield::
-		:project: wx_icons_hicolor
+		:project: wx-icons-hicolor
 		:implementations:
 		:alt: PyPI - Supported Implementations
 
 	.. |wheel| pypi-shield::
-		:project: wx_icons_hicolor
+		:project: wx-icons-hicolor
 		:wheel:
 		:alt: PyPI - Wheel
 
@@ -104,7 +104,7 @@ wx_icons_hicolor
 		:alt: Maintenance
 
 	.. |pypi-downloads| pypi-shield::
-		:project: wx_icons_hicolor
+		:project: wx-icons-hicolor
 		:downloads: month
 		:alt: PyPI - Downloads
 
