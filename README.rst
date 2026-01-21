@@ -65,20 +65,20 @@ This package provides a wxPython wxArtProvider class with icons from the Hicolor
 	:target: https://www.codefactor.io/repository/github/domdfcoding/custom_wx_icons_hicolor
 	:alt: CodeFactor Grade
 
-.. |pypi-version| image:: https://img.shields.io/pypi/v/wx_icons_hicolor
-	:target: https://pypi.org/project/wx_icons_hicolor/
+.. |pypi-version| image:: https://img.shields.io/pypi/v/wx-icons-hicolor
+	:target: https://pypi.org/project/wx-icons-hicolor/
 	:alt: PyPI - Package Version
 
-.. |supported-versions| image:: https://img.shields.io/pypi/pyversions/wx_icons_hicolor?logo=python&logoColor=white
-	:target: https://pypi.org/project/wx_icons_hicolor/
+.. |supported-versions| image:: https://img.shields.io/pypi/pyversions/wx-icons-hicolor?logo=python&logoColor=white
+	:target: https://pypi.org/project/wx-icons-hicolor/
 	:alt: PyPI - Supported Python Versions
 
-.. |supported-implementations| image:: https://img.shields.io/pypi/implementation/wx_icons_hicolor
-	:target: https://pypi.org/project/wx_icons_hicolor/
+.. |supported-implementations| image:: https://img.shields.io/pypi/implementation/wx-icons-hicolor
+	:target: https://pypi.org/project/wx-icons-hicolor/
 	:alt: PyPI - Supported Implementations
 
-.. |wheel| image:: https://img.shields.io/pypi/wheel/wx_icons_hicolor
-	:target: https://pypi.org/project/wx_icons_hicolor/
+.. |wheel| image:: https://img.shields.io/pypi/wheel/wx-icons-hicolor
+	:target: https://pypi.org/project/wx-icons-hicolor/
 	:alt: PyPI - Wheel
 
 .. |license| image:: https://img.shields.io/github/license/domdfcoding/custom_wx_icons_hicolor
@@ -99,8 +99,8 @@ This package provides a wxPython wxArtProvider class with icons from the Hicolor
 .. |maintained| image:: https://img.shields.io/maintenance/yes/2026
 	:alt: Maintenance
 
-.. |pypi-downloads| image:: https://img.shields.io/pypi/dm/wx_icons_hicolor
-	:target: https://pypistats.org/packages/wx_icons_hicolor
+.. |pypi-downloads| image:: https://img.shields.io/pypi/dm/wx-icons-hicolor
+	:target: https://pypistats.org/packages/wx-icons-hicolor
 	:alt: PyPI - Downloads
 
 .. end shields
