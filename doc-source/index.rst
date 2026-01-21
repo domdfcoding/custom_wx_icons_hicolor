@@ -115,8 +115,9 @@ Installation
 
 .. start installation
 
-.. installation:: wx_icons_hicolor
+.. installation:: custom_wx_icons_hicolor
 	:pypi:
+	:pypi-name: wx-icons-hicolor
 	:github:
 
 .. end installation
